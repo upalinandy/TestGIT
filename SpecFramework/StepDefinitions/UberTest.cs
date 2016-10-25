@@ -17,13 +17,13 @@ namespace SpecFramework.StepDefinitions
         [Given(@"User is at homepage (.*)")]
         public void GivenUserIsAtHomepage(string url)
         {
-            UIActions.GoToUrl(ObjectRepo.driver, url);
+            UIActions.GoToUrl(url);
         }
         [When(@"User clicks on Login")]
         public void WhenUserClicksOnLogin()
         {
             Console.WriteLine("In when");
-            UIActions.Click(ObjectRepo.driver, ur.signin);
+            UIActions.Click(ur.signin);
         }
 
         [Then(@"User is navigate to Login Page")]
@@ -35,7 +35,7 @@ namespace SpecFramework.StepDefinitions
         [When(@"User clicks on rider signin")]
         public void WhenUserClicksOnRiderSignin()
         {
-            UIActions.Click(ObjectRepo.driver, ur.rider_signin);
+            UIActions.Click(ur.rider_signin);
         }
 
         [Then(@"User is at ridersignin page")]
@@ -47,7 +47,7 @@ namespace SpecFramework.StepDefinitions
         [Given(@"User being at login page (.*)")]
         public void GivenUserBeingAtLoginPage(string url)
         {
-            UIActions.GoToUrl(ObjectRepo.driver, url);
+            UIActions.GoToUrl(url);
         }
 
 
