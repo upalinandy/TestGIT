@@ -1,4 +1,4 @@
-﻿Feature: TestFeature
+﻿Feature: Specflow_Excel_SampleTest
 
 @smoke
 Scenario Outline:Go To Login Page

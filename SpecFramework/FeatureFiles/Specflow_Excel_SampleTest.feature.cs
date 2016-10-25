@@ -17,20 +17,20 @@ namespace SpecFramework.FeatureFiles
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.1.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("TestFeature", SourceFile="FeatureFiles\\TestFeature.feature", SourceLine=0)]
-    public partial class TestFeatureFeature
+    [TechTalk.SpecRun.FeatureAttribute("Specflow_Excel_SampleTest", SourceFile="FeatureFiles\\Specflow_Excel_SampleTest.feature", SourceLine=0)]
+    public partial class Specflow_Excel_SampleTestFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "TestFeature.feature"
+#line 1 "Specflow_Excel_SampleTest.feature"
 #line hidden
         
         [TechTalk.SpecRun.FeatureInitialize()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "TestFeature", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Specflow_Excel_SampleTest", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         

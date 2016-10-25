@@ -87,15 +87,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GoogleApi.feature</DependentUpon>
     </Compile>
-    <Compile Include="FeatureFiles\TestFeature.feature.cs">
+    <Compile Include="FeatureFiles\SampleUITest_usingTables.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>TestFeature.feature</DependentUpon>
+      <DependentUpon>SampleUITest_usingTables.feature</DependentUpon>
     </Compile>
-    <Compile Include="FeatureFiles\UberTest.feature.cs">
+    <Compile Include="FeatureFiles\Specflow_Excel_SampleTest.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>UberTest.feature</DependentUpon>
+      <DependentUpon>Specflow_Excel_SampleTest.feature</DependentUpon>
     </Compile>
     <Compile Include="GlobalParam\ObjectRepo.cs" />
     <Compile Include="HookFiles\General.cs" />
@@ -122,13 +122,13 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>GoogleApi.feature.cs</LastGenOutput>
     </None>
-    <None Include="FeatureFiles\TestFeature.feature">
+    <None Include="FeatureFiles\SampleUITest_usingTables.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>TestFeature.feature.cs</LastGenOutput>
+      <LastGenOutput>SampleUITest_usingTables.feature.cs</LastGenOutput>
     </None>
-    <None Include="FeatureFiles\UberTest.feature">
+    <None Include="FeatureFiles\Specflow_Excel_SampleTest.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>UberTest.feature.cs</LastGenOutput>
+      <LastGenOutput>Specflow_Excel_SampleTest.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
     <None Include="runtests.cmd" />
