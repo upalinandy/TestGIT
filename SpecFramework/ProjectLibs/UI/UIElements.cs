@@ -13,5 +13,6 @@ namespace SpecFramework.ProjectLibs.UI
     {
         public By signin = By.XPath(".//*[contains(text(),'Sign In')]");
         public By rider_signin = By.XPath(".//*[contains(text(),'Rider sign in')]");
+        public By airbnb_login = By.XPath(".//*[contains(text(),'Log In')]");
     }
 }

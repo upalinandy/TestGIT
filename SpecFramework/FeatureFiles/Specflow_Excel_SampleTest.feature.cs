@@ -75,7 +75,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 5
  testRunner.Given(string.Format("User is at homepage {0}", url), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 6
- testRunner.When("User clicks on Login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("User clicks on Signin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 7
  testRunner.Then("User is navigate to Login Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -89,6 +89,35 @@ this.ScenarioSetup(scenarioInfo);
         {
             this.GoToLoginPage(" https://www.uber.com/en-IN/", new string[] {
                         "source:DataResources\\TestData.xlsx"});
+#line hidden
+        }
+        
+        public virtual void Test2(string url, string[] exampleTags)
+        {
+            string[] @__tags = new string[] {
+                    "smoke"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("test2", @__tags);
+#line 14
+this.ScenarioSetup(scenarioInfo);
+#line 15
+ testRunner.Given(string.Format("User is at homepage {0}", url), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 16
+ testRunner.When("User clicks on Login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 17
+ testRunner.Then("User is navigate to Login Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("test2, https://www.airbnb.co.in/", new string[] {
+                "smoke"}, SourceLine=20)]
+        public virtual void Test2_HttpsWww_Airbnb_Co_In()
+        {
+            this.Test2("https://www.airbnb.co.in/", ((string[])(null)));
 #line hidden
         }
         

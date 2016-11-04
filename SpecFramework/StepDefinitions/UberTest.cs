@@ -19,11 +19,18 @@ namespace SpecFramework.StepDefinitions
         {
             UIActions.GoToUrl(url);
         }
+        [When(@"User clicks on Signin")]
+        public void WhenUserClicksOnSignin()
+        {
+           
+            UIActions.Click(ur.signin);
+        }
+
         [When(@"User clicks on Login")]
         public void WhenUserClicksOnLogin()
         {
             Console.WriteLine("In when");
-            UIActions.Click(ur.signin);
+            UIActions.Click(ur.airbnb_login);
         }
 
         [Then(@"User is navigate to Login Page")]
