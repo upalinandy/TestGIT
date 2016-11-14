@@ -11,7 +11,7 @@ namespace SpecFramework.HookFiles
     public sealed class General
     {
    
-        [AfterScenario("test" , "smoke")]
+        [AfterScenario("test" , "smoke", "new")]
         public void AfterScenario()
         {
             if (ObjectRepo.driver != null)

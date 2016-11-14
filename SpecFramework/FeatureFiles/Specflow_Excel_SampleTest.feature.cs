@@ -95,7 +95,7 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void Test2(string url, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "smoke"};
+                    "new"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
@@ -114,10 +114,39 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("test2, https://www.airbnb.co.in/", new string[] {
-                "smoke"}, SourceLine=20)]
+                "new"}, SourceLine=20)]
         public virtual void Test2_HttpsWww_Airbnb_Co_In()
         {
             this.Test2("https://www.airbnb.co.in/", ((string[])(null)));
+#line hidden
+        }
+        
+        public virtual void Hellotest(string url, string[] exampleTags)
+        {
+            string[] @__tags = new string[] {
+                    "hello"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("hellotest", @__tags);
+#line 24
+this.ScenarioSetup(scenarioInfo);
+#line 25
+ testRunner.Given(string.Format("User is at homepage {0}", url), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 26
+ testRunner.When("User clicks on Login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 27
+ testRunner.Then("User is navigate to Login Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("hellotest, https://www.airbnb.co.in/", new string[] {
+                "hello"}, SourceLine=30)]
+        public virtual void Hellotest_HttpsWww_Airbnb_Co_In()
+        {
+            this.Hellotest("https://www.airbnb.co.in/", ((string[])(null)));
 #line hidden
         }
         

@@ -4,7 +4,7 @@
 @test
 Scenario Outline:Go To Login Page
 	Given User is at homepage <url>
-	When User clicks on Login
+	When User clicks on Signin
 	Then User is navigate to Login Page
 	When User clicks on rider signin
 	Then User is at ridersignin page

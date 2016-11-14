@@ -10,7 +10,7 @@ Scenario Outline:Go To Login Page
 	Examples: 
 	| url                         |
 
-@smoke
+@new
 Scenario Outline:test2
 	Given User is at homepage <url>
 	When User clicks on Login
@@ -19,6 +19,18 @@ Scenario Outline:test2
 	Examples: 
 	| url                       |
 	| https://www.airbnb.co.in/ |
+
+@hello
+Scenario Outline:hellotest
+	Given User is at homepage <url>
+	When User clicks on Login
+	Then User is navigate to Login Page
+
+	Examples: 
+	| url                       |
+	| https://www.airbnb.co.in/ |
+
+      
 
 
 
