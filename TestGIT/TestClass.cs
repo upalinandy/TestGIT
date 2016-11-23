@@ -15,6 +15,8 @@ namespace TestGIT
         {
             // TODO: Add your test code here
             Assert.Pass("Your first passing test");
+            Console.WriteLine("Hello");
+            Console.WriteLine("Hello on Branch");
         }
     }
 }
