@@ -17,9 +17,7 @@ namespace TestGIT
             Assert.Pass("Your first passing test");
             Console.WriteLine("Hello");
             Console.WriteLine("Hello on Branch");
-            Console.WriteLine("Hello on feature2");
-            Console.WriteLine("FAO testing");
-           
+            Console.WriteLine("Visual studio acting crazy!");
         }
     }
 }
