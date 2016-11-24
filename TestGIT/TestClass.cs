@@ -18,6 +18,7 @@ namespace TestGIT
             Console.WriteLine("Hello");
             Console.WriteLine("Hello on Branch");
             Console.WriteLine("Visual studio acting crazy!");
+            Console.WriteLine("I want to add feature2 again");
         }
     }
 }
