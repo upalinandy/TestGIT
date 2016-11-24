@@ -18,6 +18,7 @@ namespace TestGIT
             Console.WriteLine("Hello");
             Console.WriteLine("Hello on Branch");
             Console.WriteLine("Hello on feature2");
+            Console.WriteLine("FAO testing");
            
         }
     }
