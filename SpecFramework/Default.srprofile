@@ -9,7 +9,7 @@
   <TestAssemblyPaths>
     <TestAssemblyPath>SpecFramework.dll</TestAssemblyPath>
   </TestAssemblyPaths>
-  <Filter>@smoke | @new</Filter>
+  <Filter>@smoke | @new | @test</Filter>
   <DeploymentTransformation>
     <Steps>
       <!-- sample config transform to change the connection string-->

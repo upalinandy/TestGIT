@@ -63,7 +63,13 @@ namespace SpecFramework.FeatureFiles
         
         public virtual void VerifyLatitudeAndLongitude(string address, string latitude, string longitude, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify Latitude and Longitude", exampleTags);
+            string[] @__tags = new string[] {
+                    "new"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify Latitude and Longitude", @__tags);
 #line 5
 this.ScenarioSetup(scenarioInfo);
 #line 6
@@ -77,6 +83,7 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Verify Latitude and Longitude, 1600+Amphitheatre+Parkway,+Mountain+View,+CA", new string[] {
+                "new",
                 "source:DataResources\\APIData.xlsx"}, SourceLine=0)]
         public virtual void VerifyLatitudeAndLongitude_1600AmphitheatreParkwayMountainViewCA()
         {

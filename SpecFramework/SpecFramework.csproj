@@ -132,6 +132,7 @@
     </None>
     <None Include="packages.config" />
     <None Include="runtests.cmd" />
+    <None Include="Specframecmd.bat" />
     <None Include="SpecRunTestProfile.xsd">
       <SubType>Designer</SubType>
     </None>
