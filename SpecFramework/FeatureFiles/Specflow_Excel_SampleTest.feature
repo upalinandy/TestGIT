@@ -1,6 +1,6 @@
 ﻿Feature: Specflow_Excel_SampleTest
 
-@smoke
+@excel
 Scenario Outline:Go To Login Page
 	Given User is at homepage <url>
 	When User clicks on Signin
@@ -10,18 +10,8 @@ Scenario Outline:Go To Login Page
 	Examples: 
 	| url                         |
 
-@new
+@table
 Scenario Outline:test2
-	Given User is at homepage <url>
-	When User clicks on Login
-	Then User is navigate to Login Page
-
-	Examples: 
-	| url                       |
-	| https://www.airbnb.co.in/ |
-
-@hello
-Scenario Outline:hellotest
 	Given User is at homepage <url>
 	When User clicks on Login
 	Then User is navigate to Login Page
