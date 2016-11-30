@@ -1,5 +1,7 @@
-﻿using SpecFramework.ActionClasses;
+﻿using NUnit.Framework;
+using SpecFramework.ActionClasses;
 using SpecFramework.GlobalParam;
+using SpecFramework.Jira.JiraBug;
 using SpecFramework.TestClasses;
 using System;
 using System.Collections.Generic;
@@ -13,6 +15,10 @@ namespace SpecFramework.StepDefinitions
     public sealed class UberTest
     {
         private UbTest ur = new UbTest();
+        BugCreate bug = new BugCreate();
+        string exceptiontext = null;
+        string bugsummary = null;
+        bool bugcreateflag = false;
 
         [Given(@"User is at homepage (.*)")]
         public void GivenUserIsAtHomepage(string url)
@@ -26,6 +32,52 @@ namespace SpecFramework.StepDefinitions
             UIActions.Click(ur.signin);
         }
 
+        [Then(@"User is navigate to (.*)")]
+        public void ThenUserIsNavigateTo(string signinpage)
+        {
+            try
+            {
+                Assert.AreEqual(signinpage, UIActions.getTitle());
+            }
+            catch (Exception ex)
+            {
+                bugcreateflag = true;
+                exceptiontext = ex.ToString();
+                bugsummary = " Test does not navigate to expected sign in page";
+                throw ex;
+            }
+            finally
+            {
+               if (bugcreateflag == true)
+                {
+                  bug.create(bugsummary, exceptiontext);
+                }
+            }
+        }
+
+        [Then(@"User is navigated to Uber (.*)")]
+        public void ThenUserIsNavigatedToUber(string signinpage)
+        {
+            try
+            {
+                Assert.AreEqual(signinpage, UIActions.getTitle());
+            }
+            catch (Exception ex)
+            {
+                bugcreateflag = true;
+                exceptiontext = ex.ToString();
+                bugsummary = " Test does not navigate to expected Uber sign in page";
+                throw ex;
+            }
+            finally
+            {
+                if (bugcreateflag == true)
+                {
+                    bug.create(bugsummary, exceptiontext);
+                }
+            }
+        }
+
         [When(@"User clicks on Login")]
         public void WhenUserClicksOnLogin()
         {
@@ -33,11 +85,29 @@ namespace SpecFramework.StepDefinitions
             UIActions.Click(ur.airbnb_login);
         }
 
-        [Then(@"User is navigate to Login Page")]
-        public void ThenUserIsNavigateToLoginPage()
+        [Then(@"User is navigated to Airbnb (.*)")]
+        public void ThenUserIsNavigatedToAirbnb(string loginpage)
         {
-            Console.WriteLine("In Then");
+            try
+            {
+                Assert.AreEqual(loginpage, UIActions.getTitle());
+            }
+            catch (Exception ex)
+            {
+                bugcreateflag = true;
+                exceptiontext = ex.ToString();
+                bugsummary = " Test does not navigate to expected Airbnb page";
+                throw ex;
+            }
+            finally
+            {
+                if (bugcreateflag == true)
+                {
+                    bug.create(bugsummary, exceptiontext);
+                }
+            }
         }
+
 
         [When(@"User clicks on rider signin")]
         public void WhenUserClicksOnRiderSignin()
@@ -49,6 +119,8 @@ namespace SpecFramework.StepDefinitions
         public void ThenUserIsAtRidersigninPage()
         {
             Console.WriteLine("In rider then");
+            string expected = "hi";
+            Assert.AreEqual(expected, UIActions.getTitle());
         }
 
         [Given(@"User being at login page (.*)")]

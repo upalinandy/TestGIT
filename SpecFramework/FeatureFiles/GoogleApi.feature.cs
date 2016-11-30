@@ -17,8 +17,8 @@ namespace SpecFramework.FeatureFiles
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.1.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("GoogleGeoCode", Description="\tTo test the latitude and longgitude for location", SourceFile="FeatureFiles\\GoogleApi.feature", SourceLine=0)]
-    public partial class GoogleGeoCodeFeature
+    [TechTalk.SpecRun.FeatureAttribute("GoogleApi", Description="\tTo test the latitude and longgitude for location", SourceFile="FeatureFiles\\GoogleApi.feature", SourceLine=0)]
+    public partial class GoogleApiFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
@@ -30,7 +30,7 @@ namespace SpecFramework.FeatureFiles
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "GoogleGeoCode", "\tTo test the latitude and longgitude for location", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "GoogleApi", "\tTo test the latitude and longgitude for location", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         

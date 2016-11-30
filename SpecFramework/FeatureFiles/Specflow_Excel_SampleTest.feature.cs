@@ -61,7 +61,7 @@ namespace SpecFramework.FeatureFiles
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void GoToLoginPage(string url, string[] exampleTags)
+        public virtual void GoToLoginPage(string url, string signinpage, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "excel"};
@@ -77,7 +77,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 6
  testRunner.When("User clicks on Signin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 7
- testRunner.Then("User is navigate to Login Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("User is navigated to Uber {0}", signinpage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -87,12 +87,12 @@ this.ScenarioSetup(scenarioInfo);
                 "source:DataResources\\TestData.xlsx"}, SourceLine=0)]
         public virtual void GoToLoginPage_HttpsWww_Uber_ComEn_IN()
         {
-            this.GoToLoginPage(" https://www.uber.com/en-IN/", new string[] {
+            this.GoToLoginPage(" https://www.uber.com/en-IN/", "Sign Into Your Uber Account | Uber", new string[] {
                         "source:DataResources\\TestData.xlsx"});
 #line hidden
         }
         
-        public virtual void Test2(string url, string[] exampleTags)
+        public virtual void Test2(string url, string loginpage, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "table"};
@@ -108,7 +108,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 16
  testRunner.When("User clicks on Login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 17
- testRunner.Then("User is navigate to Login Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("User is navigated to Airbnb {0}", loginpage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -117,7 +117,7 @@ this.ScenarioSetup(scenarioInfo);
                 "table"}, SourceLine=20)]
         public virtual void Test2_HttpsWww_Airbnb_Co_In()
         {
-            this.Test2("https://www.airbnb.co.in/", ((string[])(null)));
+            this.Test2("https://www.airbnb.co.in/", "Welcome to the world of trips.", ((string[])(null)));
 #line hidden
         }
         

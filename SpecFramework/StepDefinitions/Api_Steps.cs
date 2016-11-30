@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using NUnit.Framework;
 using SpecFrame.GoogleAPI;
+using SpecFramework.Jira.JiraBug;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,10 @@ namespace SpecFrame.StepDefinitionFiles
     {
         private string googleapiurl;
         private string response;
+        BugCreate bug = new BugCreate();
+        string exceptiontext = null;
+        string bugsummary = null;
+        bool bugcreateflag = false;
 
         [Given(@"Google api that takes address and returns latitude and longitude")]
         public void GivenGoogleApiThatTakesAddressAndReturnsLatitudeAndLongitude()
@@ -43,10 +48,27 @@ namespace SpecFrame.StepDefinitionFiles
             var location = root.results[0].geometry.location;
             var latitude = location.lat;
             var longitude = location.lng;
-            Assert.AreEqual(location.lat.ToString(), exp_lat);
-            Assert.AreEqual(location.lng.ToString(), exp_lng);
+            try
+            {
+                Assert.AreEqual(location.lat.ToString(), exp_lat);
+                Assert.AreEqual(location.lng.ToString(), exp_lng);
+            }
+            catch (Exception ex)
+            {
+                bugcreateflag = true;
+                exceptiontext = ex.ToString();
+                bugsummary = "Google api test does not give correct result";
+                throw ex;
+            }
+            finally
+            {
+                if (bugcreateflag == true)
+                {
+                    bug.create(bugsummary, exceptiontext);
+                }              
+            }
+
+
         }
-
-
     }
 }
