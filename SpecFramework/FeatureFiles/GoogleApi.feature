@@ -1,4 +1,4 @@
-﻿Feature: GoogleGeoCode
+﻿Feature: GoogleApi
 	To test the latitude and longgitude for location
 
 @api
